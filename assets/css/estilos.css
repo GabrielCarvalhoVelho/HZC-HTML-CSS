@@ -33,11 +33,20 @@ body {
 }
 
 .menu-lateral {
+    position: absolute;
+    left: -100vw;
     display: flex;
     flex-direction: column;
-    background-color: #15191C;
     width: 75vw;
-    height: 100vw;
+    height: 100vh;
+    background-color: #15191C;
+    transition: left .25s;
+    z-index: 99;
+}
+
+.menu-lateral--ativo {
+    left: 0;
+    transition: left .25s;
 }
 
 .menu-lateral__logo {
@@ -68,26 +77,26 @@ body {
     left: 24px;
 }
 
-.menu-lateral__link--inicio {
+.menu-lateral__link--inicio::before {
     content: "\e902";
 }
 
-.menu-lateral__link--videos {
+.menu-lateral__link--videos::before {
     content: "\e90e";
 }
 
-.menu-lateral__link--picos {
+.menu-lateral__link--picos::before {
     content: "\e909";
 }
 
-.menu-lateral__link--integrantes {
+.menu-lateral__link--integrantes::before {
     content: "\903";
 }
 
-.menu-lateral__link--camisas {
+.menu-lateral__link--camisas::before {
     content: "\900";
 }
 
-.menu-lateral__link--pinturas {
+.menu-lateral__link--pinturas::before {
     content: "\e90a";
 }
